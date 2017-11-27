@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftEmojiDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="a89-bV-vO8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QaG-Kf-WTu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MvL-lx-vtQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNT-t7-KF6">
+                                            <rect key="frame" x="0.0" y="253" width="375" height="162"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="162" id="FG9-h0-OI8"/>
+                                            </constraints>
+                                        </pickerView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONH-v7-OWm">
+                                            <rect key="frame" x="157" y="505" width="60" height="60"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="2bB-Op-Upa"/>
+                                                <constraint firstAttribute="height" constant="60" id="cpL-qa-krV"/>
+                                            </constraints>
+                                            <state key="normal" title="go">
+                                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="30"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="goBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pFM-3h-ML9"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ONH-v7-OWm" firstAttribute="centerX" secondItem="WNT-t7-KF6" secondAttribute="centerX" id="2yF-Tm-73d"/>
+                                        <constraint firstItem="WNT-t7-KF6" firstAttribute="centerY" secondItem="MvL-lx-vtQ" secondAttribute="centerY" id="cMO-cU-44q"/>
+                                        <constraint firstItem="WNT-t7-KF6" firstAttribute="centerX" secondItem="MvL-lx-vtQ" secondAttribute="centerX" id="lsc-Uu-fQf"/>
+                                        <constraint firstItem="ONH-v7-OWm" firstAttribute="top" secondItem="WNT-t7-KF6" secondAttribute="bottom" constant="90" id="maF-EW-Oae"/>
+                                        <constraint firstItem="WNT-t7-KF6" firstAttribute="width" secondItem="MvL-lx-vtQ" secondAttribute="width" id="vBD-lH-aM2"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="a89-bV-vO8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9B8-2Q-OyP"/>
+                            <constraint firstItem="QaG-Kf-WTu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DXo-7r-Dur"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QaG-Kf-WTu" secondAttribute="trailing" id="GJp-CV-4u8"/>
+                            <constraint firstItem="a89-bV-vO8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IqZ-9k-xxm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QaG-Kf-WTu" secondAttribute="bottom" id="Roi-OG-r6g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a89-bV-vO8" secondAttribute="trailing" id="TS7-hD-nLO"/>
+                            <constraint firstItem="QaG-Kf-WTu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ghP-lg-KB5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a89-bV-vO8" secondAttribute="bottom" id="zqb-dH-1O5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="quJ-NG-Ao1"/>
+                    <connections>
+                        <outlet property="emojiPickerView" destination="WNT-t7-KF6" id="BZI-N6-UqV"/>
+                        <outlet property="goBtn" destination="ONH-v7-OWm" id="6Oe-gN-nR3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456.80000000000001" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="1440" height="2560"/>
+    </resources>
+</document>
